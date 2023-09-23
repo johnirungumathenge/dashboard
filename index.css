@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+#img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+    border-width: 2px;
+    padding: .5rem;
+    transition: all 0.5s ease;
+}
+#togg{
+    position: absolute;
+    right: -5rem;
+    border-radius: 50%;
+    width: 1.9rem;   
+    cursor: pointer;
+    top: 0;
+    transition: all 0.5s ease;
+}
+
+
+
+.sidebar.active ~ .main-content{
+    width: calc(100% - 25%);
+    left: 250px;
+}
+
+.sidebar.active{
+    width: 10%;
+}
+/* .sidebar.active .nav{
+    width: 15%;
+    left: 0;
+} */
+
+
+/* .nav{
+    position: fixed;
+    width: 18%;
+} */
+.sidebar{
+    width: 18%;
+    background: #12171e;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    
+}
+
+/* active */
+.sidebar.active .top p{
+    font-size: 1rem;
+}
+.sidebar.active .top span{
+    position: absolute;
+    padding: .2rem;
+    font-weight: 100;
+    font-size: .8rem;
+}
+
+.sidebar.active #img{
+    width: 3rem;
+    height: 3rem;
+
+}
+.sidebar.active #togg{
+    position: absolute;
+    right: 0;
+    right: -1.5rem;
+    width: 1.5rem;
+    padding: 2px;
+    transition: all 0.5s ease;
+}
+
+/* .bd.active1 ~ .main-content{
+    width: calc(100% - 10%);
+    left: 0%;
+} */
+
+/* main body active */
+
+.bd.active1 .body-top{
+    width: 90%;
+    left: 10%;
+}
+
+.container.active2 .sub-cont{
+    width: 90%;
+    left: 10%;
+}
+/*  */
+
+
+.sidebar .top{
+  margin: .5rem;
+   display: inline-block;
+   position: relative;
+
+}
+.top p{
+    text-align:center;
+    color: white;
+    font-size: 1.4rem;
+    outline: 2px salmon;
+    font-weight: 600;
+}
+.top span{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 2px;
+    color: white;
+    gap: 2rem;
+    margin-top: 1.6rem;
+    padding: .8rem;
+    position: absolute;
+}
+.item{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.item  span li{
+    margin: .5rem;
+    padding: .5rem;
+    color: black;
+    background: lavender;
+    border-radius: .4rem;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.item  span li:hover{
+    cursor: pointer;
+    background: lime;
+}
+i{
+    padding: .2rem;
+    font-size: 1rem;
+    margin: .2rem;
+    font-weight: bold;
+}
+
+.body-top{
+    position: fixed;
+    width: 82%;
+    left: 18%;
+    z-index: 100;
+    top: 0;
+    margin: 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: skyblue;
+    transition: all .5s ease;
+    display: flex;
+    justify-content: space-between;
+}
+.top-icons{
+    display: flex;
+}
+#toggleDark{
+    cursor: pointer;
+}
+
+/* container */
+/* .container{
+    width: 81.5%;
+    position: absolute;
+    margin: 2px;
+    background: lavender;
+    left: 18%;
+    margin-top: rem;
+    height: 100vh;
+    transition: all 0.5s ease;  
+} */
+
+#image{
+    width: 16rem;
+    height: 9rem;
+    margin-top: .6rem;
+}
+#cart{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    padding: 2px 1px;
+}
+.sub-cont{
+    text-align: center;
+    width: 81.5%;
+    position: absolute;
+    left: 18%;
+    top:0;
+    margin-top: 3.5rem;
+    background-color: lavender;
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    transition: all 0.5s ease; 
+}
+.cont{
+    background: white;
+    width: 100%;
+    padding: .2rem;
+    border-radius: .5rem;
+    outline: 4px 8px 4px 4px black;
+    
+}
+.cont:hover{
+    cursor: pointer;
+    background-color: white;
+}
+#image:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+.cont .cart-item{
+    width: 80%;
+    display: flex;
+    text-align: center;
+    margin: 2px auto;
+    justify-content: space-between;
+}
+.cont p{
+    font-weight: 600;
+    margin-top: .3rem;
+}
+.cont .cart-item span{
+    margin: 2px;
+    padding: .3rem;
+    color: blue;
+}
+
+/* cart items */
+
+#cart-icon{
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-cart.active3{
+    right: 0;
+    transition: .5s;
+}
+
+
+.cart {   
+    background: #fff;
+    width: 300px;
+    height: 60vh;
+    position: fixed;
+    /* right: 0; */
+    right: -300px;
+    top: 5rem;
+    z-index: 100;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 1.5s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    box-shadow: -2px solid 4px hsl(0 4% 15% / 10%);
+    border: 1px solid #fd4646;
+ 
+}
+.cart.active3{
+    right: 0;
+    transition: .5s;
+}
+
+
+.cart h1{
+    text-align: center;
+    margin:.2rem;
+    padding: .2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: blue;
+}
+#close{
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: -.5rem;
+    font-weight: 600;
+    transition: .5s;
+}
